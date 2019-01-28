@@ -4,11 +4,8 @@
 This is a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.
 
 ## Getting Started
-To install this app, a database called "burgers_db" would need to be created in the mysql database.
-
-Once "burgers_db" is created, you would need to run the schema.sql and seeds.sql file in the db folder of this app.
-
-Mysql database password may also need to be edited accordingly in config/connection.js file.
+If you are using local mysql database. 
+Mysql password may also need to be edited accordingly in config/connection.js file.
 
 ## Usage
 Using this app, users can:
