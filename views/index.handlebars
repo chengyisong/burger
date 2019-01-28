@@ -1,0 +1,49 @@
+<div class="container">
+
+<img src="/assets/img/burger.png" width="20px">
+
+<h1>Eat This Burger!</h1>
+
+<p>This is a page where you can create and eat any type of burger you want.</p>
+<p>Bon Appetit!</p>
+
+
+<div id="newBurgerDiv">
+    <h3>  <i class="fas fa-plus-circle"></i>  Add a Burger</h3>
+    <form class="create-form">
+
+    <div class="form-group">
+        <label for="ca">Burger Name:</label>
+        <input type="text" id="ca" name="name">
+    </div>
+
+    <button id="submitBtn" type="submit" class="btn btn-warning">Add Burger</button>
+    </form>
+</div>
+
+
+<div id="availableDiv">
+    <h3>  <i class="fas fa-utensils"></i>  List of Burgers Available</h3>
+    <ul>
+        {{#each burgers}}
+            {{#unless devoured}}
+                {{>list/burger-available}}
+            {{/unless}}
+            
+        {{/each}}
+    </ul>
+</div>
+
+<div id="eatenDiv">
+    <h3>  <i class="fas fa-utensils"></i>  List of Burgers Eaten</h3>
+    <ul>
+        {{#each burgers}}
+            {{#if devoured}}
+                {{>list/burger-eaten}}
+            {{/if}}
+        {{/each}}
+    </ul>
+</div>
+<br>
+
+</div>
